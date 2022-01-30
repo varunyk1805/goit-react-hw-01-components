@@ -13,7 +13,7 @@ body {
 
     background-color: rgb(218, 216, 216);
     padding: 50px;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 code {
