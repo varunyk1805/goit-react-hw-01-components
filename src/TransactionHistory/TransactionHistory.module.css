@@ -1,21 +1,20 @@
-.transaction_history {
-    margin: 0;
-    padding: 0;
+.box {
     width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgb(199, 199, 199);
+    border: 1px solid #c7c6c6;
     border-radius: 15px;
     overflow: hidden;
 }
 
-thead {
+.transaction_history {
+    table-layout: fixed;
     width: 100%;
-    background-color: rgb(138, 203, 247);
+    border-collapse: collapse;
+}
+
+thead {
     font-size: 12px;
     text-transform: uppercase;
+    background-color: rgb(138, 203, 247);
     color: #fff;
 }
 
@@ -33,27 +32,23 @@ tbody tr:nth-child(2n) {
 }
 
 tbody td:not(:last-child) {
-    border-right: 1px solid gray;
+    border-right: 1px solid #c7c6c6;
 }
 
-tr {
-    height: 50px;
-    display: flex;
-    align-items: center;
-}
-
-th {
-    height: 100%;
-    flex-basis: 33.3%;
+th,
+td {
+    padding: 20px 0;
 }
 
 th:not(:last-child) {
     border-right: 1px solid rgb(247, 245, 245);
 }
 
-td {
-    height: 100%;
-    flex-basis: 33.3%;
-    text-align: center;
+td:first-child {
+    padding-left: 80px;
     text-transform: capitalize;
+}
+
+td:not(:first-child) {
+    text-align: center;
 }

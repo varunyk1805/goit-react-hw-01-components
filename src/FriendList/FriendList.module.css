@@ -15,28 +15,6 @@
     background-color: rgb(244, 248, 235);
 
     display: flex;
-    justify-content: start;
     align-items: center;
     gap: 25px;
-}
-
-.status {
-    margin-left: 25px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: black;
-}
-
-.avatar {
-    width: 60px;
-    height: 60px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: cadetblue;
-}
-
-.name {
-    font-size: 28px;
-    font-weight: 500;
 }

@@ -1,14 +1,10 @@
 import styles from './Statistics.module.css';
 
-
-// Компонент должен принимать два пропа title и stats, в которых указывается заголовок и объект статистики.
-
-// title - не обязателен, и если он не передан, не должна рендериться разметка заголовка <h2>.
-// stats - массив объектов содержащих информацию о элементе статистики. Может иметь произвольное кол-во элементов.
-// Цвет фона элемента статистики в оформлении можно пропустить, либо создать функцию для генерации случайного цвета.
-// Компонент должен создавать DOM элемент следующей структуры.
+const colors = ['#585528', '#6e4158', '#482c53', '#463368', '#2b414b', '#193527', '#353d21', '#7a4c31', '#8a2a8a', '#143823', '#3a203a', '#5c3338'];
+const randomColor = () => colors[Math.floor(Math.random() * colors.length)];
 
 const Statistics = (data) => {
+    
     const statistics = styles.statistics;
     const title = styles.title;
     const stat_list = styles.stat_list;
@@ -23,7 +19,7 @@ const Statistics = (data) => {
                 )}
                 <ul className={stat_list}>
                     {data.stats.map(stat => (
-                        <li key={stat.id} className={item}>
+                        <li key={stat.id} className={item} style={{ backgroundColor: randomColor() }}>
                             <span className={label}>{stat.label}</span>
                             <span className={percentage}>{stat.percentage}%</span>
                         </li>
@@ -33,28 +29,5 @@ const Statistics = (data) => {
         </>
     );
 };
-
-// <section class="statistics">
-//   <h2 class="title">Upload stats</h2>
-
-//   <ul class="stat-list">
-//     <li class="item">
-//       <span class="label">.docx</span>
-//       <span class="percentage">4%</span>
-//     </li>
-//     <li class="item">
-//       <span class="label">.mp3</span>
-//       <span class="percentage">14%</span>
-//     </li>
-//     <li class="item">
-//       <span class="label">.pdf</span>
-//       <span class="percentage">41%</span>
-//     </li>
-//     <li class="item">
-//       <span class="label">.mp4</span>
-//       <span class="percentage">12%</span>
-//     </li>
-//   </ul>
-// </section>
 
 export default Statistics;
