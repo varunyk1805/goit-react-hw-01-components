@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import styles from './TransactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => {
@@ -28,6 +29,10 @@ const TransactionHistory = ({ items }) => {
             </div>
         </>
     )
+};
+
+TransactionHistory.propTypes = {
+    items: propTypes.array.isRequired,
 };
 
 export default TransactionHistory;
