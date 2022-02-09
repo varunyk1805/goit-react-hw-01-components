@@ -1,4 +1,4 @@
-import propTypes from "prop-types";
+import propTypes from 'prop-types';
 import styles from './FriendListItem.module.css';
 
 const FriendListItem = (friend) => {
@@ -19,8 +19,8 @@ const FriendListItem = (friend) => {
                 <img
                     className={avatar}
                     src={friend.avatar}
-                    alt="User avatar"
-                    width="48"
+                    alt='User avatar'
+                    width='48'
                     />
                 <p className={name}>{friend.name}</p>
             </li>

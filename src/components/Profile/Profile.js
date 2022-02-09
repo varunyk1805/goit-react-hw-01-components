@@ -1,4 +1,4 @@
-import propTypes from "prop-types";
+import propTypes from 'prop-types';
 import styles from './Profile.module.css';
 
 const Profile = (user) => {
@@ -18,7 +18,7 @@ const Profile = (user) => {
                 <div className={description}>
                     <img
                         src={user.avatar}
-                        alt="User avatar"
+                        alt='User avatar'
                         className={avatar}
                     />
                     <p className={name}>{user.username}</p>
